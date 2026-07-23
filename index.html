@@ -7,12 +7,34 @@
 <head>
 
  <img class="menu" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
- <img class="menu" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
- <img class="menu" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
+ <img class="menu" onclick="texto()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
+ <img class="menu" onclick="videos()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
 
  <script>
 
   function audio() {
+
+      const cerrarInicio = document.querySelectorAll(".menu");
+      for (let i = 0; i < cerrarInicio.length; i++) {
+         cerrarInicio[i].style.width = "0px";
+         cerrarInicio[i].style.height = "0px";
+         cerrarInicio[i].style.visibility = "hidden";
+         
+      }
+  }
+
+  function texto() {
+
+      const cerrarInicio = document.querySelectorAll(".menu");
+      for (let i = 0; i < cerrarInicio.length; i++) {
+         cerrarInicio[i].style.width = "0px";
+         cerrarInicio[i].style.height = "0px";
+         cerrarInicio[i].style.visibility = "hidden";
+         
+      }
+  }
+
+  function video() {
 
       const cerrarInicio = document.querySelectorAll(".menu");
       for (let i = 0; i < cerrarInicio.length; i++) {
