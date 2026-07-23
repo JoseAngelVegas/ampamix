@@ -10,6 +10,8 @@
  <img class="menu" onclick="texto()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
  <img class="menu" onclick="video()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
 
+  <img class="video" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
+
  <script>
 
   function audio() {
@@ -43,6 +45,13 @@
          cerrarInicio[i].style.visibility = "hidden";
          
       }
+
+    const abrir = document.querySelectorAll(".video");
+      for (let i = 0; i < abrir.length; i++) {
+         abrir[i].style.width = "120px";
+         abrir[i].style.height = "120px";
+         
+      }
   }
 
   </script>
@@ -54,6 +63,15 @@
     border-radius: 20px;
     margin: 0 auto;
     display: flex;
+    }
+
+    .video {
+
+    box-shadow: 0px 0px 5px black;
+    border-radius: 100px;
+    margin: 0 auto;
+    display: flex;
+     
     }
 
       body {
