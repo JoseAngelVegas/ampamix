@@ -43,9 +43,8 @@
 
       const cerrarInicio = document.querySelectorAll(".menu");
       for (let i = 0; i < cerrarInicio.length; i++) {
-         cerrarInicio[i].style.width = "0px";
-         cerrarInicio[i].style.height = "0px";
-         cerrarInicio[i].style.visibility = "hidden";
+         cerrarInicio[i].style.filter = "blur(5px)";
+         
          
       }
 
@@ -71,10 +70,12 @@
 
     div {
      background-color: black;
-     width: 500px;
-     height: 500px;
-     opacity: 20%;
-     filter: blur(2px);
+     width: 50px;
+     height: 50px;
+     opacity: 50%;
+     margin: 0 auto;
+     position: relative;
+     top: -450px;
     }
 
     .video {
