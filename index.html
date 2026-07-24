@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html>
 
@@ -6,14 +6,14 @@
 
 <head>
 
- <img class="menu" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
- <img class="menu" onclick="texto()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
- <img class="menu" onclick="video()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
+ <img id="animacionCerrar1" class="menu" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
+ <img id="animacionCerrar2" class="menu" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
+ <img id="animacionCerrar3" class="menu" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
 
  <div></div>
 
-  <img class="video" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
-  <img class="video" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
+  <img id="animacion1" class="video" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
+  <img id="animacion2" class="video" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
 
  <script>
 
@@ -44,6 +44,8 @@
       const cerrarInicio = document.querySelectorAll(".menu");
       for (let i = 0; i < cerrarInicio.length; i++) {
          cerrarInicio[i].style.filter = "blur(5px)";
+         cerrarInicio[i].style.width = "80px";
+         cerrarInicio[i].style.height = "80px";
          
          
       }
@@ -54,9 +56,33 @@
          abrir[i].style.height = "120px";
          
       }
+      
+      
   }
 
   </script>
+  
+  <script>
+  
+   function videoAnimacion() {
+  var el = document.getElementById('animacion1');
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = null;
+  
+  document.getElementById('animacion1').style.animationPlayState = "running"
+    document.getElementById('animacion2').style.animationPlayState = "running"
+    
+ document.getElementById('animacionCerrar1').style.animationPlayState = "running"
+    document.getElementById('animacionCerrar2').style.animationPlayState = "running"
+    
+ document.getElementById('animacionCerrar3').style.animationPlayState = "running"
+
+  
+}
+  
+  </script>
+
 
    <style>
 
@@ -71,19 +97,71 @@
 
     div {
      background-color: black;
-     width: 97%;
-     height: 98%;
+     width: %;
+     height: %;
      opacity: 50%;
      position: fixed;
      top: 7px;
     }
 
     .video {
-    box-shadow: 0px 0px 20px black;
+    position: relative;
+    box-shadow: 0px 5px 20px black;
     border-radius: 100px;
     margin: 0 auto;
     display: flex;
+    transform: translateY(-100%);
     }
+    
+    #animacion1 {
+  position: relative;
+  animation: bounce 0.3s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+
+}
+
+#animacion2 {
+  position: relative;
+  animation: bounce 0.5s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+
+}
+
+#animacionCerrar1 {
+  position: relative;
+  animation: cerrar 0.2s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+
+}
+
+#animacionCerrar2 {
+  position: relative;
+  animation: cerrar 0.3s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+
+}
+
+#animacionCerrar3 {
+  position: relative;
+  animation: cerrar 0.4s;
+  animation-fill-mode: both;
+  animation-play-state: paused;
+
+}
+
+@keyframes cerrar {
+  0% { width: 150px; height: 150px; }
+  100% { width: 80px; height: 80px; }
+}
+
+@keyframes bounce {
+  0% { top: -10px; width: 0px; height: 0px; }
+  100% { top: -100px; width: 120px; height: 120px; }
+}
 
       body {
 background: #58df8c;
@@ -104,4 +182,5 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#58DF8C", endC
 </body>
 
 </head>
+
 </html>
