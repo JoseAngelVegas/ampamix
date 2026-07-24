@@ -13,11 +13,6 @@
  <img class="menuInterfaz" id="animacionMenu3" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
 
 
-
-
- 
- 
- <img class="menu" id="animacionCerrar3" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="0" height="0">
  
  </div>
 
@@ -57,8 +52,8 @@
 
       const cerrarInicio = document.querySelectorAll(".menuInterfaz");
       for (let i = 0; i < cerrarInicio.length; i++) {
-          cerrarInicio[i].style.animation = "cerrar 1s";
-            cerrarInicio[i].style.animationFillMode = "both";
+          cerrarInicio[i].style.animation = "cerrar 0.5s";
+           cerrarInicio[i].style.animationFillMode = "both";
 
   
          
@@ -80,7 +75,7 @@
   <script>
   
    function videoAnimacion() {
-  var el = document.getElementById('animacion1');
+  var el = document.getElementById('animacionMenu3');
   el.style.animation = 'none';
   el.offsetHeight;
   el.style.animation = null;
@@ -88,10 +83,10 @@
   document.getElementById('animacion1').style.animationPlayState = "running"
     document.getElementById('animacion2').style.animationPlayState = "running"
     
- document.getElementById('animacionCerrar1').style.animationPlayState = "running"
-    document.getElementById('animacionCerrar2').style.animationPlayState = "running"
+ document.getElementById('animacionMenu1').style.animationPlayState = "running"
+    document.getElementById('animacionMenu2').style.animationPlayState = "running"
     
- document.getElementById('animacionCerrar3').style.animationPlayState = "running"
+ document.getElementById('animacionMenu3').style.animationPlayState = "running"
  
  document.getElementById('pantalla').style.animationPlayState = "running"
 
@@ -196,8 +191,8 @@
 }
 
 @keyframes cerrar {
-  0% { top: 0px; width: 150px; height: 150px; }
-  100% { top: 250px; width: 80px; height: 80px; }
+  0% {  opacity: 100%; top: 0px; width: 150px; height: 150px; }
+  100% { opacity: 0%; top: 300px; width: 80px; height: 80px; }
 }
 
 @keyframes hola {
@@ -208,7 +203,7 @@
 
 @keyframes bounce {
   0% { top: -10px; width: 0px; height: 0px; }
-  100% { top: -200px; width: 120px; height: 120px; }
+  100% { top: -280px; width: 120px; height: 120px; }
 }
 
 @keyframes animacionPantalla {
