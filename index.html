@@ -6,14 +6,18 @@
 
 <head>
 
- <img id="animacionCerrar1" class="menu" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
- <img id="animacionCerrar2" class="menu" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
- <img id="animacionCerrar3" class="menu" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
+<div class="menu">
+ <img class="menuInterfaz" id="animacionCerrar1" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
+ <img class="menuInterfaz" id="animacionCerrar2" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
+ <img class="menuInterfaz" id="animacionCerrar3" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
+ </div>
 
- <div></div>
+ <div class="pantalla"></div>
 
-  <img id="animacion1" class="video" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
-  <img id="animacion2" class="video" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
+<div class="video">
+  <img id="animacion1" class="videoInterfaz" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
+  <img id="animacion2" class="videoInterfaz" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
+ </div>
 
  <script>
 
@@ -41,16 +45,13 @@
 
   function video() {
 
-      const cerrarInicio = document.querySelectorAll(".menu");
+      const cerrarInicio = document.querySelectorAll(".menu, .menuInterfaz");
       for (let i = 0; i < cerrarInicio.length; i++) {
          cerrarInicio[i].style.filter = "blur(5px)";
-         cerrarInicio[i].style.width = "80px";
-         cerrarInicio[i].style.height = "80px";
-         
          
       }
 
-    const abrir = document.querySelectorAll(".video");
+    const abrir = document.querySelectorAll(".video, .videoInterfaz");
       for (let i = 0; i < abrir.length; i++) {
          abrir[i].style.width = "120px";
          abrir[i].style.height = "120px";
@@ -87,15 +88,25 @@
    <style>
 
     .menu {
-     box-shadow: 0px 0px 5px black;
-    border-radius: 20px;
-    margin: 0 auto;
+    position: relative;
+    gap: 50px;
     display: flex;
-    transform: translateY(50%);
-     
-    }
+    flex-direction: column;
+    margin: 0 auto;
 
-    div {
+
+    }
+    
+    .menuInterfaz {
+     box-shadow: 0px 0px 5px black;
+     border-radius: 20px;
+     transform: translateY(50%);
+     margin: 0 auto;
+
+    }
+    
+
+    .pantalla {
      background-color: black;
      width: %;
      height: %;
@@ -106,11 +117,19 @@
 
     .video {
     position: relative;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    }
+    
+    .videoInterfaz { 
+    position: relative;
     box-shadow: 0px 5px 20px black;
     border-radius: 100px;
-    margin: 0 auto;
-    display: flex;
     transform: translateY(-100%);
+
+   
     }
     
     #animacion1 {
@@ -154,13 +173,13 @@
 }
 
 @keyframes cerrar {
-  0% { width: 150px; height: 150px; }
-  100% { width: 80px; height: 80px; }
+  0% { top: 0px; width: 150px; height: 150px; }
+  100% { top: 250px; width: 80px; height: 80px; }
 }
 
 @keyframes bounce {
   0% { top: -10px; width: 0px; height: 0px; }
-  100% { top: -100px; width: 120px; height: 120px; }
+  100% { top: -200px; width: 120px; height: 120px; }
 }
 
       body {
