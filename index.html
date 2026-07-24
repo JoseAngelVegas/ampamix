@@ -16,9 +16,9 @@
  
  </div>
 
- <div id="pantalla">
-   <img id="cerrar" onclick="cerrar()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Cerrar.png?raw=true" width="0" height="0">
- </div>
+ <div id="pantalla"></div>
+ 
+ <img id="cerrar" class="cerrar" onclick="cerrar()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Cerrar.png?raw=true" width="0" height="0">
 
 <div class="video">
   <img id="animacion1" class="videoInterfaz" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
@@ -134,7 +134,7 @@
   animation-play-state: running;
     }
 
-    #cerrar {
+    .cerrar {
      width: 0%;
      height: 0%;
      opacity: 100%;
@@ -218,13 +218,13 @@
 }
 
 @keyframes animacionPantalla {
-  0% { width: 0%; height: 0%; }
-  100% { width: 97%; height: 99%; }
+  0% { top: 0px; width: 0%; height: 0%; }
+  100% {top: 0px; width: 100%; height: 100%; }
 }
 
     @keyframes animacionCerrar {
-  0% { width: 0px; height: 0px; }
-  100% { width: 200px; height: 500px; }
+  0% { top: 0px; width: 0px; height: 0px; }
+  100% { top: 0px; width: 80px; height: 35px; }
 }
 
       body {
