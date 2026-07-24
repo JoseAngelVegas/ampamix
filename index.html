@@ -1,5 +1,3 @@
-
-
 <html>
 
 <body>
@@ -12,7 +10,7 @@
  <img class="menuInterfaz" id="animacionCerrar3" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
  </div>
 
- <div class="pantalla"></div>
+ <div id="pantalla"></div>
 
 <div class="video">
   <img id="animacion1" class="videoInterfaz" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true" width="0" height="0">
@@ -78,6 +76,9 @@
     document.getElementById('animacionCerrar2').style.animationPlayState = "running"
     
  document.getElementById('animacionCerrar3').style.animationPlayState = "running"
+ 
+ document.getElementById('pantalla').style.animationPlayState = "running"
+
 
   
 }
@@ -106,13 +107,15 @@
     }
     
 
-    .pantalla {
+    #pantalla {
      background-color: black;
-     width: %;
-     height: %;
-     opacity: 50%;
+     width: 0%;
+     height: 0%;
+     opacity: 30%;
      position: fixed;
-     top: 7px;
+     animation: animacionPantalla 0.5s;
+     animation-fill-mode: both;
+     animation-play-state: paused;
     }
 
     .video {
@@ -180,6 +183,11 @@
 @keyframes bounce {
   0% { top: -10px; width: 0px; height: 0px; }
   100% { top: -200px; width: 120px; height: 120px; }
+}
+
+@keyframes animacionPantalla {
+  0% { top: 0px; width: 0px; height: 0px; }
+  100% { top: 0px; width: 100%; height: 100%; }
 }
 
       body {
