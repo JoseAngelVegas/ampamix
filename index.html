@@ -66,9 +66,46 @@
          
       }
       
-      
-  }
+      }
+    
+    
+    
+  </script>
+  
+  <script>
+  
+  function cerrar() {
+  var el = document.getElementById('cerrar');
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = null;
+  
+  document.getElementById('animacion1').style.animationPlayState = "running"
+  
+  document.getElementById('animacion1').style.animation = "animacionIconoVolver 0.3s";
 
+    document.getElementById('animacion2').style.animationPlayState = "running"
+    
+  document.getElementById('animacion2').style.animation = "animacionIconoVolver 0.4s";
+    
+ document.getElementById('animacionMenu1').style.animationPlayState = "running"
+ 
+ document.getElementById('animacionMenu1').style.animation = "volverInterfaz 0.2s";
+    document.getElementById('animacionMenu2').style.animationPlayState = "running"
+    
+document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s";
+    
+ document.getElementById('animacionMenu3').style.animationPlayState = "running"
+  
+ document.getElementById('pantalla').style.animationPlayState = "running"
+ 
+ document.getElementById('pantalla').style.animation = "volverAnimacionPantalla 0.4s";
+
+   document.getElementById('cerrar').style.animationPlayState = "running"
+
+  
+}
+  
   </script>
   
   <script>
@@ -90,7 +127,6 @@
  document.getElementById('pantalla').style.animationPlayState = "running"
 
    document.getElementById('cerrar').style.animationPlayState = "running"
-
 
   
 }
@@ -198,7 +234,6 @@
   animation-fill-mode: both;
   animation-play-state: paused;
 
-
 }
 
 @keyframes cerrar {
@@ -227,6 +262,24 @@
   100% { top: 0px; width: 80px; height: 35px; }
 }
 
+  @keyframes volverInterfaz {
+  0% { opacity: 0%; top: 300px; width: 80px; height: 80px; }
+   100% {  opacity: 100%; top: 0px; width: 150px; height: 150px; 
+}
+}
+
+@keyframes volverAnimacionPantalla {
+  0% {top: 0px; width: 100%; height: 100%; }
+    100% { top: 0px; width: 0%; height: 0%; }
+}
+
+
+@keyframes animacionIconoVolver {
+  0% { top: -280px; width: 120px; height: 120px; }
+  100% { top: -10px; width: 0px; height: 0px; }
+}
+
+
       body {
 background: #58df8c;
 background: -webkit-linear-gradient(95deg, rgba(88, 223, 140, 1) 0%, rgba(91, 203, 207, 1) 44%, rgba(99, 201, 162, 1) 80%, rgba(83, 237, 219, 1) 100%);
@@ -240,6 +293,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#58DF8C", endC
                width: 40%;
             }
          }
+        
 
 </style>
 
