@@ -139,7 +139,7 @@
      height: 0%;
      opacity: 100%;
      position: fixed;
-     animation: animacionPantalla 0.8s;
+     animation: animacionCerrar 0.8s;
      animation-fill-mode: both;
      animation-play-state: paused;
     }
@@ -218,8 +218,13 @@
 }
 
 @keyframes animacionPantalla {
-  0% { top: 0px; width: 0px; height: 0px; }
-  100% { top: 0px; width: 97%; height: 99%; }
+  0% { width: 0%; height: 0%; }
+  100% { width: 97%; height: 99%; }
+}
+
+    @keyframes animacionCerrar {
+  0% { width: 0px; height: 0px; }
+  100% { width: 200px; height: 500px; }
 }
 
       body {
