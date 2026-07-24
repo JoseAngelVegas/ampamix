@@ -83,10 +83,15 @@
   document.getElementById('animacion1').style.animationPlayState = "running"
   
   document.getElementById('animacion1').style.animation = "animacionIconoVolver 0.3s";
+  
+   document.getElementById('animacion1').style.animationFillMode = "both"
+
 
     document.getElementById('animacion2').style.animationPlayState = "running"
     
   document.getElementById('animacion2').style.animation = "animacionIconoVolver 0.4s";
+  
+ document.getElementById('animacion2').style.animationFillMode = "both"
     
  document.getElementById('animacionMenu1').style.animationPlayState = "running"
  
@@ -102,6 +107,12 @@ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s
  document.getElementById('pantalla').style.animation = "volverAnimacionPantalla 0.4s";
 
    document.getElementById('cerrar').style.animationPlayState = "running"
+   
+     document.getElementById('cerrar').style.animation = "animacionBotonCerrar 0.3s";
+  
+   document.getElementById('animacion1').style.animationFillMode = "both"
+   
+   document.getElementById('cerrar').style.animationFillMode = "both"
 
   
 }
@@ -117,7 +128,15 @@ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s
   el.style.animation = null;
   
   document.getElementById('animacion1').style.animationPlayState = "running"
+  
+    document.getElementById('animacion1').style.animation = "bounce 0.3s";
+  
+   document.getElementById('animacion1').style.animationFillMode = "both"
     document.getElementById('animacion2').style.animationPlayState = "running"
+    
+  document.getElementById('animacion2').style.animation = "bounce 0.4s";
+  
+   document.getElementById('animacion2').style.animationFillMode = "both"
     
  document.getElementById('animacionMenu1').style.animationPlayState = "running"
     document.getElementById('animacionMenu2').style.animationPlayState = "running"
@@ -125,8 +144,16 @@ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s
  document.getElementById('animacionMenu3').style.animationPlayState = "running"
  
  document.getElementById('pantalla').style.animationPlayState = "running"
+ 
+  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
+  
+  document.getElementById('pantalla').style.animationFillMode = "both"
 
    document.getElementById('cerrar').style.animationPlayState = "running"
+   
+   document.getElementById('cerrar').style.animation = "animacionCerrar 0.4s";
+   
+   document.getElementById('cerrar').style.animationFillMode = "both"
 
   
 }
@@ -278,6 +305,12 @@ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s
   0% { top: -280px; width: 120px; height: 120px; }
   100% { top: -10px; width: 0px; height: 0px; }
 }
+
+@keyframes animacionBotonCerrar {
+  0% { top: 0px; width: 80px; height: 35px; }
+  100% { top: 0px; width: 0px; height: 0px; }
+}
+
 
 
       body {
