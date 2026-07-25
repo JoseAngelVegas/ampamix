@@ -8,7 +8,7 @@
 
  <img class="menuInterfaz" id="animacionMenu1" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
  
- <img class="menuInterfaz" id="animacionMenu2"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
+ <img class="menuInterfaz" id="animacionMenu2" onclick="texto(), textoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
  
  <img class="menuInterfaz" id="animacionMenu3" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
 
@@ -186,7 +186,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 
 <script>
   
-   function videoAnimacion() {
+   function textoAnimacion() {
   var el = document.getElementById('animacionMenu2');
   el.style.animation = 'none';
   el.offsetHeight;
