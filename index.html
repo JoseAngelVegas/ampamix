@@ -6,7 +6,7 @@
 
 <div class="menuCompleto">
 
- <img class="menuInterfaz" id="animacionMenu1" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
+ <img class="menuInterfaz" id="animacionMenu1" onclick="audio(), audioAnimacion()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
  
  <img class="menuInterfaz" id="animacionMenu2" onclick="texto(), textoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
  
@@ -37,15 +37,14 @@
 
  <script>
 
-  function audio() {
+   function audio() {
 
-      const cerrarInicio = document.querySelectorAll(".menu");
+const cerrarInicio = document.querySelectorAll(".menuInterfaz");
       for (let i = 0; i < cerrarInicio.length; i++) {
-         cerrarInicio[i].style.width = "0px";
-         cerrarInicio[i].style.height = "0px";
-         cerrarInicio[i].style.visibility = "hidden";
-         
-      }
+          cerrarInicio[i].style.animation = "cerrar 0.5s";
+           cerrarInicio[i].style.animationFillMode = "both";
+
+      }        
   }
 
   function texto() {
@@ -227,6 +226,49 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
   </script>
 
 
+ <script>
+  
+   function audioAnimacion() {
+  var el = document.getElementById('animacionMenu1');
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = null;
+  
+  document.getElementById('animacion1').style.animationPlayState = "running"
+  
+    document.getElementById('animacion1').style.animation = "bounce 0.3s";
+  
+   document.getElementById('animacion1').style.animationFillMode = "both";
+   
+       
+    document.getElementById('trofeo').style.animationPlayState = "running"
+    
+  document.getElementById('trofeo').style.animation = "trofeo 0.4s";
+  
+   document.getElementById('trofeo').style.animationFillMode = "both"
+    
+ document.getElementById('animacionMenu1').style.animationPlayState = "running"
+    
+    document.getElementById('animacionMenu2').style.animationPlayState = "running"
+    
+ document.getElementById('animacionMenu3').style.animationPlayState = "running"
+ 
+ document.getElementById('pantalla').style.animationPlayState = "running"
+ 
+  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
+  
+  document.getElementById('pantalla').style.animationFillMode = "both"
+
+   document.getElementById('cerrar').style.animationPlayState = "running"
+   
+   document.getElementById('cerrar').style.animation = "animacionCerrar 0.4s";
+   
+   document.getElementById('cerrar').style.animationFillMode = "both"
+
+  
+}
+  
+  </script>
    <style>
 
    
@@ -413,7 +455,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 
 
 @keyframes animacionIconoVolver {
-  0% { top: -280px; width: 120px; height: 120px; }
+  0% { top: -20px; width: 120px; height: 120px; }
   100% { top: -10px; width: 0px; height: 0px; }
 
 @keyframes animacionTrofeoCerrar {
