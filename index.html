@@ -55,14 +55,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
           cerrarInicio[i].style.animation = "cerrar 0.5s";
            cerrarInicio[i].style.animationFillMode = "both";
 
-      }
-      
-    const abrir = document.querySelectorAll(".texto, .textoInterfaz");
-      for (let i = 0; i < abrir.length; i++) {
-         abrir[i].style.width = "120px";
-         abrir[i].style.height = "120px";
-         
-      }
+      }        
       
   }
 
@@ -323,8 +316,17 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
     margin: 0 auto;
     }
     
+    .texto {
+    position: relative;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    }
+    
     .videoInterfaz { 
-     margin: 0 auto;
+   
+   margin: 0 auto;
      display: flex;
      flex-direction: column;
      animation-fill-mode: both;
@@ -333,7 +335,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
     box-shadow: 0px 5px 20px black;
     border-radius: 100px;
     transform: translateY(-100%);
-   
+    
     }
 
 .textoInterfaz { 
@@ -378,7 +380,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 
 @keyframes bounce {
   0% { top: -10px; width: 0px; height: 0px; }
-  100% { top: -280px; width: 120px; height: 120px; }
+  100% { top: -220px; width: 120px; height: 120px; }
 }
 
 @keyframes trofeo {
