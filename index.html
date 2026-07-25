@@ -21,7 +21,7 @@
  <img id="cerrar" class="cerrar" onclick="cerrar()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Cerrar.png?raw=true" width="0" height="0">
 
 <div class="video">
-  <img id="animacion1" class="videoInterfaz" onclick="Josechicha()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="0" height="0">
+  <img id="trofeo" class="trofeo" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="0" height="0">
   
   <img id="animacion2" class="videoInterfaz" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
  </div>
@@ -87,11 +87,11 @@
    document.getElementById('animacion1').style.animationFillMode = "both"
 
 
-    document.getElementById('animacion2').style.animationPlayState = "running"
+    document.getElementById('trofeo').style.animationPlayState = "running"
     
-  document.getElementById('animacion2').style.animation = "animacionIconoVolver 0.4s";
+  document.getElementById('trofeo').style.animation = "animacionIconoVolver 0.4s";
   
- document.getElementById('animacion2').style.animationFillMode = "both"
+ document.getElementById('trofeo').style.animationFillMode = "both"
     
  document.getElementById('animacionMenu1').style.animationPlayState = "running"
  
@@ -132,11 +132,12 @@ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s
     document.getElementById('animacion1').style.animation = "bounce 0.3s";
   
    document.getElementById('animacion1').style.animationFillMode = "both"
-    document.getElementById('animacion2').style.animationPlayState = "running"
     
-  document.getElementById('animacion2').style.animation = "bounce 0.4s";
+    document.getElementById('trofeo').style.animationPlayState = "running"
+    
+  document.getElementById('trofeo').style.animation = "bounce 0.4s";
   
-   document.getElementById('animacion2').style.animationFillMode = "both"
+   document.getElementById('trofeo').style.animationFillMode = "both"
     
  document.getElementById('animacionMenu1').style.animationPlayState = "running"
     document.getElementById('animacionMenu2').style.animationPlayState = "running"
@@ -162,6 +163,16 @@ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s
 
 
    <style>
+
+    .trofeo {
+      margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     animation-fill-mode: both;
+     animation-play-state: paused;
+     position: relative;
+    }
+
    
    .menuCompleto {
         flex-direction: column;
