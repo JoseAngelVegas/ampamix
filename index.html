@@ -8,7 +8,7 @@
 
  <img class="menuInterfaz" id="animacionMenu1" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Audio.png?raw=true" width="150" height="150">
  
- <img class="menuInterfaz" id="animacionMenu2" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
+ <img class="menuInterfaz" id="animacionMenu2"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="150" height="150">
  
  <img class="menuInterfaz" id="animacionMenu3" onclick="video(), videoAnimacion()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Videos.png?raw=true" width="150" height="150">
 
@@ -21,9 +21,10 @@
  <img id="cerrar" class="cerrar" onclick="cerrar()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Cerrar.png?raw=true" width="0" height="0">
 
 <div class="video">
+
   <img id="trofeo" class="trofeo" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="0" height="0">
   
-  <img id="animacion2" class="videoInterfaz" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
+  <img id="animacion1" class="videoInterfaz" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
  </div>
 
  <script>
@@ -80,36 +81,38 @@
   el.offsetHeight;
   el.style.animation = null;
   
-  document.getElementById('animacion1').style.animationPlayState = "running"
+  document.getElementById('animacion1').style.animationPlayState = "running";
   
   document.getElementById('animacion1').style.animation = "animacionIconoVolver 0.3s";
   
-   document.getElementById('animacion1').style.animationFillMode = "both"
+   document.getElementById('animacion1').style.animationFillMode = "both";
 
 
-    document.getElementById('trofeo').style.animationPlayState = "running"
+    document.getElementById('trofeo').style.animationPlayState = "running";
     
   document.getElementById('trofeo').style.animation = "animacionIconoVolver 0.4s";
   
- document.getElementById('trofeo').style.animationFillMode = "both"
+ document.getElementById('trofeo').style.animationFillMode = "both";
     
- document.getElementById('animacionMenu1').style.animationPlayState = "running"
+ document.getElementById('animacionMenu1').style.animationPlayState = "running";
  
  document.getElementById('animacionMenu1').style.animation = "volverInterfaz 0.2s";
+ 
+ document.getElementById('animacionMenu2').style.animationPlayState = "running";
+ 
+ document.getElementById('animacionMenu2').style.animation = "volverInterfaz 0.3s";
    
-  document.getElementById('pantalla').style.animationPlayState = "running"
+  document.getElementById('pantalla').style.animationPlayState = "running";
   
- document.getElementById('pantalla').style.animationPlayState = "running"
+ document.getElementById('pantalla').style.animationPlayState = "running";
  
  document.getElementById('pantalla').style.animation = "volverAnimacionPantalla 0.4s";
 
    document.getElementById('cerrar').style.animationPlayState = "running"
    
      document.getElementById('cerrar').style.animation = "animacionBotonCerrar 0.3s";
-  
-   document.getElementById('animacion1').style.animationFillMode = "both"
-   
-   document.getElementById('cerrar').style.animationFillMode = "both"
+     
+   document.getElementById('cerrar').style.animationFillMode = "both";
 
   
 }
@@ -128,8 +131,9 @@
   
     document.getElementById('animacion1').style.animation = "bounce 0.3s";
   
-   document.getElementById('animacion1').style.animationFillMode = "both"
-    
+   document.getElementById('animacion1').style.animationFillMode = "both";
+   
+       
     document.getElementById('trofeo').style.animationPlayState = "running"
     
   document.getElementById('trofeo').style.animation = "bounce 0.4s";
@@ -162,6 +166,7 @@
 
    <style>
 
+   
     .trofeo {
       margin: 0 auto;
      display: flex;
@@ -169,9 +174,11 @@
      animation-fill-mode: both;
      animation-play-state: paused;
      position: relative;
-    }
+         transform: translateY(-100%);
 
-   
+    }
+    
+
    .menuCompleto {
         flex-direction: column;
           display: flex;
