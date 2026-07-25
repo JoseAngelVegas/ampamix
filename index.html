@@ -20,6 +20,20 @@
  
  <img id="cerrar" class="cerrar" onclick="cerrar()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Cerrar.png?raw=true" width="0" height="0">
 
+
+
+
+div class="texto">
+
+  <img id="trofeo" class="trofeo" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="0" height="0">
+  
+  <img id="destacado" class="textoInterfaz" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
+ </div>
+
+
+
+
+
 <div class="video">
 
   <img id="trofeo" class="trofeo" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="0" height="0">
@@ -42,13 +56,20 @@
 
   function texto() {
 
-      const cerrarInicio = document.querySelectorAll(".menu");
+const cerrarInicio = document.querySelectorAll(".menuInterfaz");
       for (let i = 0; i < cerrarInicio.length; i++) {
-         cerrarInicio[i].style.width = "0px";
-         cerrarInicio[i].style.height = "0px";
-         cerrarInicio[i].style.visibility = "hidden";
+          cerrarInicio[i].style.animation = "cerrar 0.5s";
+           cerrarInicio[i].style.animationFillMode = "both";
+
+      }
+      
+    const abrir = document.querySelectorAll(".texto, .textoInterfaz");
+      for (let i = 0; i < abrir.length; i++) {
+         abrir[i].style.width = "120px";
+         abrir[i].style.height = "120px";
          
       }
+      
   }
 
   function video() {
@@ -132,6 +153,50 @@
     document.getElementById('animacion1').style.animation = "bounce 0.3s";
   
    document.getElementById('animacion1').style.animationFillMode = "both";
+   
+       
+    document.getElementById('trofeo').style.animationPlayState = "running"
+    
+  document.getElementById('trofeo').style.animation = "trofeo 0.4s";
+  
+   document.getElementById('trofeo').style.animationFillMode = "both"
+    
+ document.getElementById('animacionMenu1').style.animationPlayState = "running"
+    
+    document.getElementById('animacionMenu2').style.animationPlayState = "running"
+    
+ document.getElementById('animacionMenu3').style.animationPlayState = "running"
+ 
+ document.getElementById('pantalla').style.animationPlayState = "running"
+ 
+  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
+  
+  document.getElementById('pantalla').style.animationFillMode = "both"
+
+   document.getElementById('cerrar').style.animationPlayState = "running"
+   
+   document.getElementById('cerrar').style.animation = "animacionCerrar 0.4s";
+   
+   document.getElementById('cerrar').style.animationFillMode = "both"
+
+  
+}
+  
+  </script>
+
+<script>
+  
+   function videoAnimacion() {
+  var el = document.getElementById('animacionMenu2');
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = null;
+  
+  document.getElementById('destacado').style.animationPlayState = "running"
+  
+    document.getElementById('destacado').style.animation = "bounce 0.3s";
+  
+   document.getElementById('destacado').style.animationFillMode = "both";
    
        
     document.getElementById('trofeo').style.animationPlayState = "running"
@@ -256,7 +321,19 @@
     }
     
     .videoInterfaz { 
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     animation-fill-mode: both;
+     animation-play-state: paused;
+    position: relative;
+    box-shadow: 0px 5px 20px black;
+    border-radius: 100px;
+    transform: translateY(-100%);
+   
+    }
 
+.textoInterfaz { 
      margin: 0 auto;
      display: flex;
      flex-direction: column;
