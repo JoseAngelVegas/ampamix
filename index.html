@@ -160,9 +160,12 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
     
  document.getElementById('animacionMenu1').style.animationPlayState = "running"
     
-    document.getElementById('animacionMenu2').style.animationPlayState = "running"
     
- document.getElementById('animacionMenu3').style.animationPlayState = "running"
+    
+    document.getElementById('animacionMenu3').style.animation = "iconoEspacioVideo 0.4s";
+  
+   document.getElementById('animacionMenu3').style.animationFillMode = "both"
+    document.getElementById('animacionMenu3').style.animationPlayState = "running"
  
  document.getElementById('pantalla').style.animationPlayState = "running"
  
@@ -204,7 +207,12 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
     
  document.getElementById('animacionMenu1').style.animationPlayState = "running"
     
+    document.getElementById('animacionMenu2').style.animation = "iconoEspacioTexto 0.4s";
+  
+   document.getElementById('animacionMenu2').style.animationFillMode = "both"
     document.getElementById('animacionMenu2').style.animationPlayState = "running"
+    
+    
     
  document.getElementById('animacionMenu3').style.animationPlayState = "running"
  
@@ -247,7 +255,10 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
   
    document.getElementById('trofeo').style.animationFillMode = "both"
     
- document.getElementById('animacionMenu1').style.animationPlayState = "running"
+     document.getElementById('animacionMenu1').style.animation = "iconoEspacioAudio 0.4s";
+  
+   document.getElementById('animacionMenu1').style.animationFillMode = "both"
+    document.getElementById('animacionMenu1').style.animationPlayState = "running"
     
     document.getElementById('animacionMenu2').style.animationPlayState = "running"
     
@@ -412,8 +423,27 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 }
 
 @keyframes cerrar {
-  0% {  opacity: 100%; top: 0px; width: 150px; height: 150px; }
-  100% { opacity: 0%; top: 0px; width: 80px; height: 80px; }
+  0% {  filter: blur(0px); opacity: 100%; top: 0px; width: 150px; height: 150px; }
+  100% { filter: blur(10px); opacity: 0%; top: 0px; width: 80px; height: 80px; }
+ 
+}
+
+@keyframes iconoEspacioAudio {
+  0% {  filter: blur(0px); top: 0px; }
+  100% { filter: blur(10px); top: 400px; }
+ 
+}
+
+@keyframes iconoEspacioTexto {
+  0% {  filter: blur(0px); top: 0px; }
+  100% { filter: blur(10px); top: 250px; }
+ 
+}
+
+@keyframes iconoEspacioVideo {
+  0% {  filter: blur(0px); top: 0px; }
+  100% { filter: blur(10px); top: 140px; }
+ 
 }
 
 @keyframes hola {
@@ -423,7 +453,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 }
 
 @keyframes bounce {
-  0% { top: -10px; width: 0px; height: 0px; }
+  0% {  top: -10px; width: 0px; height: 0px; }
   100% { top: -220px; width: 120px; height: 120px; }
 }
 
@@ -443,9 +473,8 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 }
 
   @keyframes volverInterfaz {
-  0% { opacity: 0%; top: 300px; width: 80px; height: 80px; }
-   100% {  opacity: 100%; top: 0px; width: 150px; height: 150px; 
-}
+  0% { filter: blur(0px); opacity: 0%; top: 300px; width: 80px; height: 80px; }
+   100% {  filter: blur(10px); opacity: 100%; top: 0px; width: 150px; height: 150px; }
 }
 
 @keyframes volverAnimacionPantalla {
