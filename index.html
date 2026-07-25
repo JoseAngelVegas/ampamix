@@ -23,7 +23,11 @@
 
   <img id="trofeo" class="trofeo" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="0" height="0">
 
-<div class="texto">  
+<div class="audio">  
+  <img id="audioDestacado" class="textoInterfaz" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha%20Soundtrack.png?raw=true" width="0" height="0">
+ </div>
+
+ <div class="texto">  
   <img id="destacado" class="textoInterfaz" onclick="Nosotros()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS.png?raw=true" width="0" height="0">
  </div>
 
@@ -96,11 +100,15 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
   
    document.getElementById('animacion1').style.animationFillMode = "both";
 
+   document.getElementById('audioDestacado').style.animationPlayState = "running";
+  
+  document.getElementById('audioDestacado').style.animation = "animacionIconoVolver 0.1s";
+  
+   document.getElementById('audioDestacado').style.animationFillMode = "both";
+
    document.getElementById('destacado').style.animationPlayState = "running";
   
   document.getElementById('destacado').style.animation = "animacionIconoVolver 0.1s";
-  
-  
   
    document.getElementById('destacado').style.animationFillMode = "both";
 
@@ -195,7 +203,13 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
   el.offsetHeight;
   el.style.animation = null;
   
-  document.getElementById('destacado').style.animationPlayState = "running"
+  document.getElementById('audioDestacado').style.animationPlayState = "running"
+  
+    document.getElementById('audioDestacado').style.animation = "bounce 0.4s";
+  
+   document.getElementById('audioDestacado').style.animationFillMode = "both";
+
+    document.getElementById('destacado').style.animationPlayState = "running"
   
     document.getElementById('destacado').style.animation = "bounce 0.4s";
   
