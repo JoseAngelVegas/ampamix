@@ -399,20 +399,20 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
      flex-direction: column;
      }
 
-#animacionMenu1 {
+#Audio {
   animation: movimientoPrincipal 1.3s infinite;
   animation-fill-mode: both;
   animation-play-state: running;
     }
     
-    #animacionMenu2 {
+    #Texto {
   animation: movimientoPrincipal 1.2s infinite;
   animation-fill-mode: both;
   animation-play-state: running;
     }
     
-      #animacionMenu3 {
-  animation: movimientoPrincipal 1.1s infinite;
+      #Video {
+  animation: movimientoPrincipal 1s infinite;
   animation-fill-mode: both;
   animation-play-state: running;
     }
@@ -492,22 +492,6 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
     transform: translateY(-100%);
    
     }
-    
-    #animacion1 {
-  position: relative;
-  animation: bounce 0.3s;
-  animation-fill-mode: both;
-  animation-play-state: paused;
-
-}
-
-#animacion2 {
-  position: relative;
-  animation: bounce 0.5s;
-  animation-fill-mode: both;
-  animation-play-state: paused;
-
-}
 
 
       body {
@@ -599,7 +583,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#58DF8C", endC
   0% { top: 0px; width: 80px; height: 35px; }
   100% { top: 0px; width: 0px; height: 0px; }
 }
- 
 
 @keyframes cerrar {
   0% {  filter: blur(0px); opacity: 100%; top: 0px; width: 150px; height: 150px; }
