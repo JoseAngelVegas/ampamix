@@ -125,11 +125,11 @@
    
    
   
-  document.getElementById('textoDestacado').style.animationPlayState = "running"
+  document.getElementById('audioDestacado').style.animationPlayState = "running"
   
-    document.getElementById('textoDestacado').style.animation = "iconoAnimacion 0.3s";
+    document.getElementById('audioDestacado').style.animation = "iconoAnimacion 0.3s";
   
-   document.getElementById('textoDestacado').style.animationFillMode = "both";
+   document.getElementById('audioDestacado').style.animationFillMode = "both";
    
        
        
@@ -139,15 +139,85 @@
        
 
     
-     document.getElementById('Texto').style.animation = "iconoEspacioAudio 0.4s";
+     document.getElementById('Texto').style.animation = "iconoEspacioTexto 0.4s";
   
    document.getElementById('Texto').style.animationFillMode = "both"
    
     document.getElementById('Texto').style.animationPlayState = "running"
     
+    
     document.getElementById('Audio').style.animationPlayState = "running"
     
  document.getElementById('Video').style.animationPlayState = "running"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ document.getElementById('pantalla').style.animationPlayState = "running"
+ 
+  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
+  
+  document.getElementById('pantalla').style.animationFillMode = "both"
+  
+  
+
+   document.getElementById('cerrar').style.animationPlayState = "running"
+   
+   document.getElementById('cerrar').style.animation = "animacionDeCerrar 0.4s";
+   
+   document.getElementById('cerrar').style.animationFillMode = "both"
+
+  
+}
+  
+  </script>
+  
+   <script>
+  
+   function videoAnimacion() {
+  var el = document.getElementById('Video');
+  el.style.animation = 'none';
+  el.offsetHeight;
+  el.style.animation = null;
+  
+  
+     document.getElementById('trofeo').style.animationPlayState = "running"
+    
+  document.getElementById('trofeo').style.animation = "trofeo 0.4s";
+  
+   document.getElementById('trofeo').style.animationFillMode = "both"
+   
+   
+  
+  document.getElementById('audioDestacado').style.animationPlayState = "running"
+  
+    document.getElementById('audioDestacado').style.animation = "iconoAnimacion 0.3s";
+  
+   document.getElementById('audioDestacado').style.animationFillMode = "both";
+   
+       
+       
+       
+       
+       
+       
+
+    
+     document.getElementById('Video').style.animation = "iconoEspacioVideo 0.4s";
+  
+   document.getElementById('Video').style.animationFillMode = "both"
+   
+    document.getElementById('Video').style.animationPlayState = "running"
+    
+    
+    document.getElementById('Audio').style.animationPlayState = "running"
+    
+ document.getElementById('Texto').style.animationPlayState = "running"
  
  
  
@@ -203,19 +273,13 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 
   function video() {
 
-      const cerrarInicio = document.querySelectorAll(".menuInterfaz");
+ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
       for (let i = 0; i < cerrarInicio.length; i++) {
           cerrarInicio[i].style.animation = "cerrar 0.3s";
            cerrarInicio[i].style.animationFillMode = "both";
 
       }
       
-    const abrir = document.querySelectorAll(".video, .videoInterfaz");
-      for (let i = 0; i < abrir.length; i++) {
-         abrir[i].style.width = "120px";
-         abrir[i].style.height = "120px";
-         
-      }
       
       }
     
@@ -231,35 +295,39 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
   el.offsetHeight;
   el.style.animation = null;
   
-  document.getElementById('animacion1').style.animationPlayState = "running";
+ 
   
-  document.getElementById('animacion1').style.animation = "animacionIconoVolver 0.1s";
-  
-   document.getElementById('animacion1').style.animationFillMode = "both";
-
    document.getElementById('audioDestacado').style.animationPlayState = "running";
   
   document.getElementById('audioDestacado').style.animation = "animacionIconoVolver 0.1s";
   
    document.getElementById('audioDestacado').style.animationFillMode = "both";
+   
+   
 
    document.getElementById('destacado').style.animationPlayState = "running";
   
   document.getElementById('destacado').style.animation = "animacionIconoVolver 0.1s";
   
    document.getElementById('destacado').style.animationFillMode = "both";
+   
+   
 
     document.getElementById('trofeo').style.animationPlayState = "running";
     
   document.getElementById('trofeo').style.animation = "animacionTrofeoCerrar 0.1s";
   
  document.getElementById('trofeo').style.animationFillMode = "both";
+ 
+ 
     
  document.getElementById('Audio').style.animationPlayState = "running";
  
  document.getElementById('Audio').style.animation = "volverInterfaz 0.5s";
  
   document.getElementById('Audio').style.animationFillMode = "both";
+  
+  
 
  
  document.getElementById('Texto').style.animationPlayState = "running";
@@ -267,11 +335,25 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
  document.getElementById('Texto').style.animation = "volverInterfaz 0.5s";
 
    document.getElementById('Texto').style.animationPlayState = "running";
+   
+   
+   
+ document.getElementById('Video').style.animationPlayState = "running";
+ 
+ document.getElementById('Video').style.animation = "volverInterfaz 0.5s";
+
+   document.getElementById('Video').style.animationPlayState = "running";
+ 
  
    
   document.getElementById('pantalla').style.animationPlayState = "running";
    
  document.getElementById('pantalla').style.animation = "volverAnimacionPantalla 0.4s";
+ 
+    document.getElementById('pantalla').style.animationFillMode = "both";
+
+ 
+ 
 
    document.getElementById('cerrar').style.animationPlayState = "running"
    
@@ -517,6 +599,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#58DF8C", endC
   0% { top: 0px; width: 80px; height: 35px; }
   100% { top: 0px; width: 0px; height: 0px; }
 }
+ 
 
 @keyframes cerrar {
   0% {  filter: blur(0px); opacity: 100%; top: 0px; width: 150px; height: 150px; }
