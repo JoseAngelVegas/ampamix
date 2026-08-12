@@ -7,32 +7,35 @@
  
  <img class="Bandeja" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Ampamix%20interfaz%20Concepto%20(2).png?raw=true" width="100%" height="189">
  
- <img class="menuInterfaz" id="Audio" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Ampamix%20Sprites%20(13).png?raw=true" width="200" height="200">
+ <img class="menuInterfaz" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Ampamix%20Sprites%20(13).png?raw=true" width="200" height="200">
  
- <img class="Reflejo" id="Audio" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Ampamix%20Sprites%20(13)%201.png?raw=true" width="200" height="57">
+ <img class="Reflejo" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Ampamix%20Sprites%20(13)%201.png?raw=true" width="200" height="57">
  
 
   <img class="Trofeo" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Trofeo.png?raw=true" width="50" height="50">
 
    <img class="Icono" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="50" height="50">
+   
+   
+   
 
- <img class="Destacado" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Biolog%C3%ADa%20Llamada%20Josechicha.png?raw=true" width="350" height="200">
+ <img class="Destacado" onclick="biologiaLlamadaJosechicha()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Biolog%C3%ADa%20Llamada%20Josechicha.png?raw=true" width="350" height="200">
  
  
  
 <div class="Espacio">
  
-<img class="Contenido" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Tranqui%20Netwoork.png?raw=true">
+<img id="Contenido" class="Contenido" onclick="tranquiNetwoork()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Tranqui%20Netwoork.png?raw=true">
 
 <img class="IconoContenido" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Texto.png?raw=true" width="50" height="50">
 
 
-<img class="Contenido" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS%20(Corto).png?raw=true">
+<img class="Contenido" onclick="laSuperioridadDeNOSOTROS()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/La%20Superioridad%20De%20NOSOTROS%20(Corto).png?raw=true">
 
-<img class="IconoContenido" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Video.png?raw=true" width="50" height="50">
+<img  class="IconoContenido" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Video.png?raw=true" width="50" height="50">
 
 
-<img class="Contenido" onclick="audio()" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true">
+<img class="Contenido" onclick="josechicha()"  src="https://github.com/JoseAngelVegas/ampamix/blob/main/Josechicha.png?raw=true">
 
 <img class="IconoContenido" src="https://github.com/JoseAngelVegas/ampamix/blob/main/Video.png?raw=true" width="50" height="50">
 
@@ -44,359 +47,20 @@
 
 </div>
 
-
-
  
  <script>
-  
-   function audioAnimacion() {
-  var el = document.getElementById('Audio');
-  el.style.animation = 'none';
-  el.offsetHeight;
-  el.style.animation = null;
-  
-  
-     document.getElementById('trofeo').style.animationPlayState = "running"
-    
-  document.getElementById('trofeo').style.animation = "trofeo 0.4s";
-  
-   document.getElementById('trofeo').style.animationFillMode = "both"
-   
-   
-  
-  document.getElementById('audioDestacado').style.animationPlayState = "running"
-  
-    document.getElementById('audioDestacado').style.animation = "iconoAnimacion 0.3s";
-  
-   document.getElementById('audioDestacado').style.animationFillMode = "both";
-   
-   
-   
-   
-  document.getElementById('Mas').style.animationPlayState = "running"
-  
-    document.getElementById('Mas').style.animation = "mas 0.3s";
-  
-   document.getElementById('Mas').style.animationFillMode = "both";
-   
-       
-       
-       
-       
-       
-       
-
-    
-     document.getElementById('Audio').style.animation = "iconoEspacioAudio 0.4s";
-  
-   document.getElementById('Audio').style.animationFillMode = "both"
-   
-    document.getElementById('Audio').style.animationPlayState = "running"
-    
-    document.getElementById('Texto').style.animationPlayState = "running"
-    
- document.getElementById('Video').style.animationPlayState = "running"
  
- 
- 
- 
- 
- 
- 
- 
- 
- document.getElementById('pantalla').style.animationPlayState = "running"
- 
-  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
-  
-  document.getElementById('pantalla').style.animationFillMode = "both"
-  
-  
-
-   document.getElementById('cerrar').style.animationPlayState = "running"
-   
-   document.getElementById('cerrar').style.animation = "animacionDeCerrar 0.4s";
-   
-   document.getElementById('cerrar').style.animationFillMode = "both"
-
-  
-}
-  
-  </script>
-  
-  
-   <script>
-  
-   function textoAnimacion() {
-  var el = document.getElementById('Texto');
-  el.style.animation = 'none';
-  el.offsetHeight;
-  el.style.animation = null;
-  
-  
-     document.getElementById('trofeo').style.animationPlayState = "running"
-    
-  document.getElementById('trofeo').style.animation = "trofeo 0.4s";
-  
-   document.getElementById('trofeo').style.animationFillMode = "both"
-   
-   
-  
-  document.getElementById('audioDestacado').style.animationPlayState = "running"
-  
-    document.getElementById('audioDestacado').style.animation = "iconoAnimacion 0.3s";
-  
-   document.getElementById('audioDestacado').style.animationFillMode = "both";
-   
-        document.getElementById('Mas').style.animationPlayState = "running"
-  
-    document.getElementById('Mas').style.animation = "mas 0.3s";
-  
-   document.getElementById('Mas').style.animationFillMode = "both";
-       
-       
-       
-       
-       
-
-    
-     document.getElementById('Texto').style.animation = "iconoEspacioTexto 0.4s";
-  
-   document.getElementById('Texto').style.animationFillMode = "both"
-   
-    document.getElementById('Texto').style.animationPlayState = "running"
-    
-    
-    document.getElementById('Audio').style.animationPlayState = "running"
-    
- document.getElementById('Video').style.animationPlayState = "running"
- 
- 
- 
- 
- 
- 
- 
- 
- 
- document.getElementById('pantalla').style.animationPlayState = "running"
- 
-  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
-  
-  document.getElementById('pantalla').style.animationFillMode = "both"
-  
-  
-
-   document.getElementById('cerrar').style.animationPlayState = "running"
-   
-   document.getElementById('cerrar').style.animation = "animacionDeCerrar 0.4s";
-   
-   document.getElementById('cerrar').style.animationFillMode = "both"
-
-  
-}
-  
-  </script>
-  
-   <script>
-  
-   function videoAnimacion() {
-  var el = document.getElementById('Video');
-  el.style.animation = 'none';
-  el.offsetHeight;
-  el.style.animation = null;
-  
-  
-     document.getElementById('trofeo').style.animationPlayState = "running"
-    
-  document.getElementById('trofeo').style.animation = "trofeo 0.4s";
-  
-   document.getElementById('trofeo').style.animationFillMode = "both"
-   
-   
-  
-  document.getElementById('audioDestacado').style.animationPlayState = "running"
-  
-    document.getElementById('audioDestacado').style.animation = "iconoAnimacion 0.3s";
-  
-   document.getElementById('audioDestacado').style.animationFillMode = "both";
-   
-        document.getElementById('Mas').style.animationPlayState = "running"
-  
-    document.getElementById('Mas').style.animation = "mas 0.3s";
-  
-   document.getElementById('Mas').style.animationFillMode = "both";
-       
-       
-       
-       
-       
-
-    
-     document.getElementById('Video').style.animation = "iconoEspacioVideo 0.4s";
-  
-   document.getElementById('Video').style.animationFillMode = "both"
-   
-   
-    document.getElementById('Video').style.animationPlayState = "running"
-    
-    
-    document.getElementById('Audio').style.animationPlayState = "running"
-    
- document.getElementById('Texto').style.animationPlayState = "running"
- 
- 
- 
- 
- 
- 
- 
- 
- 
- document.getElementById('pantalla').style.animationPlayState = "running"
- 
-  document.getElementById('pantalla').style.animation = "animacionPantalla 0.4s";
-  
-  document.getElementById('pantalla').style.animationFillMode = "both"
-  
-  
-
-   document.getElementById('cerrar').style.animationPlayState = "running"
-   
-   document.getElementById('cerrar').style.animation = "animacionDeCerrar 0.4s";
-   
-   document.getElementById('cerrar').style.animationFillMode = "both"
-
-  
-}
-  
-  </script>
-
- <script>
-
-   function audio() {
-
-const cerrarInicio = document.querySelectorAll(".menuInterfaz");
-      for (let i = 0; i < cerrarInicio.length; i++) {
-          cerrarInicio[i].style.animation = "cerrar 0.3s";
-           cerrarInicio[i].style.animationFillMode = "both";
-
-      }        
-  }
-
-  function texto() {
-
-const cerrarInicio = document.querySelectorAll(".menuInterfaz");
-      for (let i = 0; i < cerrarInicio.length; i++) {
-          cerrarInicio[i].style.animation = "cerrar 0.3s";
-           cerrarInicio[i].style.animationFillMode = "both";
-
-      }        
-      
-  }
-  
-
-
-  function video() {
-
- const cerrarInicio = document.querySelectorAll(".menuInterfaz");
-      for (let i = 0; i < cerrarInicio.length; i++) {
-          cerrarInicio[i].style.animation = "cerrar 0.3s";
-           cerrarInicio[i].style.animationFillMode = "both";
-
+  function biologiaLlamadaJosechicha() {
+        
+     const abrir = document.querySelectorAll(".menuInterfaz, .Contenido, .Destacado, .IconoContenido, .Icono, .Reflejo, .Bandeja");
+      for (let i = 0; i < abrir.length; i++) {
+         abrir[i].style.height = "0px";
+         abrir[i].style.height = "0px";
+         abrir[i].style.visibility = "hidden";
+         
       }
-      
-      
       }
-    
-    
-    
-  </script>
-  
-  <script>
-  
-  function cerrar() {
-  var el = document.getElementById('cerrar');
-  el.style.animation = 'none';
-  el.offsetHeight;
-  el.style.animation = null;
-  
- 
-  
-   document.getElementById('audioDestacado').style.animationPlayState = "running";
-  
-  document.getElementById('audioDestacado').style.animation = "animacionIconoVolver 0.1s";
-  
-   document.getElementById('audioDestacado').style.animationFillMode = "both";
    
-   
-
-   document.getElementById('destacado').style.animationPlayState = "running";
-  
-  document.getElementById('destacado').style.animation = "animacionIconoVolver 0.1s";
-  
-   document.getElementById('destacado').style.animationFillMode = "both";
-   
-   
-
-    document.getElementById('trofeo').style.animationPlayState = "running";
-    
-  document.getElementById('trofeo').style.animation = "animacionTrofeoCerrar 0.1s";
-  
- document.getElementById('trofeo').style.animationFillMode = "both";
- 
- 
- 
- document.getElementById('Mas').style.animationPlayState = "running";
-    
-  document.getElementById('Mas').style.animation = "animacionMasCerrar 0.1s";
-  
- document.getElementById('Mas').style.animationFillMode = "both";
- 
- 
-    
- document.getElementById('Audio').style.animationPlayState = "running";
- 
- document.getElementById('Audio').style.animation = "volverInterfaz 0.5s";
- 
-  document.getElementById('Audio').style.animationFillMode = "both";
-  
-  
-
- 
- document.getElementById('Texto').style.animationPlayState = "running";
- 
- document.getElementById('Texto').style.animation = "volverInterfaz 0.5s";
-
-   document.getElementById('Texto').style.animationPlayState = "running";
-   
-   
-   
- document.getElementById('Video').style.animationPlayState = "running";
- 
- document.getElementById('Video').style.animation = "volverInterfaz 0.5s";
-
-   document.getElementById('Video').style.animationPlayState = "running";
- 
- 
-   
-  document.getElementById('pantalla').style.animationPlayState = "running";
-   
- document.getElementById('pantalla').style.animation = "volverAnimacionPantalla 0.4s";
- 
-    document.getElementById('pantalla').style.animationFillMode = "both";
-
- 
- 
-
-   document.getElementById('cerrar').style.animationPlayState = "running"
-   
-     document.getElementById('cerrar').style.animation = "animacionBotonCerrar 0.3s";
-     
-   document.getElementById('cerrar').style.animationFillMode = "both";
-
-  
-}
   
   </script>
   
@@ -471,6 +135,7 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
      border-radius: 15px;
      margin: 0 auto;
           transform: translateY(50%);
+       
           }
           
    .Espacio {
@@ -488,7 +153,11 @@ const cerrarInicio = document.querySelectorAll(".menuInterfaz");
 
     
     
-     
+     #Elemento {
+     animation: Abrir algo 0.8s;
+     animation-fill-mode: both;
+     animation-play-state: paused;
+     }
      
     .cerrar {
      width: 0%;
